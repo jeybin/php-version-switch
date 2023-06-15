@@ -1,142 +1,140 @@
 #!/bin/sh
 
 version=$1
-if [ ! -z "$1" ]
-then
-	echo ""
-	echo ""
-	echo "****************************************"
-	echo ">>>        Dismod php version        <<<"
-	echo "****************************************"
-	echo ""
-	echo ""
-	sudo a2dismod php5.6
-	sudo a2dismod php7.0
-	sudo a2dismod php7.1
-	sudo a2dismod php7.2
-	sudo a2dismod php7.3
-	sudo a2dismod php7.4
-	sudo a2dismod php8.0
-	sudo a2dismod php8.1
-	sudo a2dismod php8.2
+if [ -n "$1" ]
+	then
+		echo ""
+		echo ""
+		echo "****************************************"
+		echo ">>>        Dismod php version        <<<"
+		echo "****************************************"
+		echo ""
+		echo ""
+		sudo a2dismod php5.6
+		sudo a2dismod php7.0
+		sudo a2dismod php7.1
+		sudo a2dismod php7.2
+		sudo a2dismod php7.3
+		sudo a2dismod php7.4
+		sudo a2dismod php8.0
+		sudo a2dismod php8.1
+		sudo a2dismod php8.2
 
-	echo ""
-	echo ""
-	echo "****************************************"
-	echo ">>>        Dismod mpm_prefork        <<<"
-	echo "****************************************"
-	echo ""
-	echo ""
+		echo ""
+		echo ""
+		echo "****************************************"
+		echo ">>>        Dismod mpm_prefork        <<<"
+		echo "****************************************"
+		echo ""
+		echo ""
 
-	sudo a2dismod mpm_prefork
-	sudo a2dismod mpm_prefork php5.6
-	sudo a2dismod mpm_prefork php7.0
-	sudo a2dismod mpm_prefork php7.1
-	sudo a2dismod mpm_prefork php7.2
-	sudo a2dismod mpm_prefork php7.3
-	sudo a2dismod mpm_prefork php7.4
-	sudo a2dismod mpm_prefork php8.0
-	sudo a2dismod mpm_prefork php8.1
-	sudo a2dismod mpm_prefork php8.2
+		sudo a2dismod mpm_prefork
+		sudo a2dismod mpm_prefork php5.6
+		sudo a2dismod mpm_prefork php7.0
+		sudo a2dismod mpm_prefork php7.1
+		sudo a2dismod mpm_prefork php7.2
+		sudo a2dismod mpm_prefork php7.3
+		sudo a2dismod mpm_prefork php7.4
+		sudo a2dismod mpm_prefork php8.0
+		sudo a2dismod mpm_prefork php8.1
+		sudo a2dismod mpm_prefork php8.2
 
-	echo ""
-	echo ""
-	echo "****************************************"
-	echo ">>>         Dismod mpm_event         <<<"
-	echo "****************************************"
-	echo ""
-	echo ""
+		echo ""
+		echo ""
+		echo "****************************************"
+		echo ">>>         Dismod mpm_event         <<<"
+		echo "****************************************"
+		echo ""
+		echo ""
 
-	sudo a2dismod mpm_event
-	sudo a2dismod mpm_event php5.6
-	sudo a2dismod mpm_event php7.1
-	sudo a2dismod mpm_event php7.2
-	sudo a2dismod mpm_event php7.3
-	sudo a2dismod mpm_event php7.4
-	sudo a2dismod mpm_event php8.0
-	sudo a2dismod mpm_event php8.1
-	sudo a2dismod mpm_event php8.2
+		sudo a2dismod mpm_event
+		sudo a2dismod mpm_event php5.6
+		sudo a2dismod mpm_event php7.1
+		sudo a2dismod mpm_event php7.2
+		sudo a2dismod mpm_event php7.3
+		sudo a2dismod mpm_event php7.4
+		sudo a2dismod mpm_event php8.0
+		sudo a2dismod mpm_event php8.1
+		sudo a2dismod mpm_event php8.2
 
-	echo ""
-	echo ""
-	echo "****************************************"
-	echo ">>>         Dismod mpm_worker        <<<"
-	echo "****************************************"
-	echo ""
-	echo ""
+		echo ""
+		echo ""
+		echo "****************************************"
+		echo ">>>         Dismod mpm_worker        <<<"
+		echo "****************************************"
+		echo ""
+		echo ""
 
-	sudo a2dismod mpm_worker
-	sudo a2dismod mpm_worker php5.6
-	sudo a2dismod mpm_worker php7.1
-	sudo a2dismod mpm_worker php7.2
-	sudo a2dismod mpm_worker php7.3
-	sudo a2dismod mpm_worker php7.4
-	sudo a2dismod mpm_worker php8.0
-	sudo a2dismod mpm_worker php8.1
-	sudo a2dismod mpm_worker php8.2
+		sudo a2dismod mpm_worker
+		sudo a2dismod mpm_worker php5.6
+		sudo a2dismod mpm_worker php7.1
+		sudo a2dismod mpm_worker php7.2
+		sudo a2dismod mpm_worker php7.3
+		sudo a2dismod mpm_worker php7.4
+		sudo a2dismod mpm_worker php8.0
+		sudo a2dismod mpm_worker php8.1
+		sudo a2dismod mpm_worker php8.2
 
-	echo ""
-	echo ""
-	echo "****************************************"
-	echo ">>>      	     Disconf FPM           <<<"
-	echo "****************************************"
-	echo ""
-	echo ""
+		echo ""
+		echo ""
+		echo "****************************************"
+		echo ">>>      	     Disconf FPM           <<<"
+		echo "****************************************"
+		echo ""
+		echo ""
 
-	sudo a2disconf php5.6-fpm
-	sudo a2disconf php7.1-fpm
-	sudo a2disconf php7.2-fpm
-	sudo a2disconf php7.3-fpm
-	sudo a2disconf php7.4-fpm
-	sudo a2disconf php8.0-fpm
-	sudo a2disconf php8.1-fpm
-	sudo a2disconf php8.2-fpm
+		sudo a2disconf php5.6-fpm
+		sudo a2disconf php7.1-fpm
+		sudo a2disconf php7.2-fpm
+		sudo a2disconf php7.3-fpm
+		sudo a2disconf php7.4-fpm
+		sudo a2disconf php8.0-fpm
+		sudo a2disconf php8.1-fpm
+		sudo a2disconf php8.2-fpm
 
-	# sudo service apache2 restart
+		# sudo service apache2 restart
 
-	echo ""
-	echo ""
-	echo "****************************************"
-	echo ">>>         ENABLING PHP VER $1      <<<"
-	echo "****************************************"
-	echo ""
-	echo ""
+		echo ""
+		echo ""
+		echo "****************************************"
+		echo ">>>         ENABLING PHP VER $1      <<<"
+		echo "****************************************"
+		echo ""
+		echo ""
 
+		if [ "$1" -eq '7' ]
+			then
+				sudo a2enmod php7.4
+				sudo update-alternatives --config php
+				sudo update-alternatives --config phar
+				sudo update-alternatives --config phar.phar
 
-    if [ "$1" -eq '7' ]
-        then
-			sudo a2enmod php7.4
-			sudo update-alternatives --config php7.4
-			sudo update-alternatives --config phar7.4
-			sudo update-alternatives --config phar.phar7.4
+				sudo a2enmod mpm_prefork php7.4
+				sudo a2enmod mpm_event php7.4
+				sudo a2enmod mpm_worker php7.4
+				sudo a2enconf php7.4-fpm
+				sudo systemctl start php7.4-fpm.service
+		fi
 
-			sudo a2enmod mpm_prefork php7.4
-			sudo a2enmod mpm_event php7.4
-			sudo a2enmod mpm_worker php7.4
-			sudo a2enconf php7.4-fpm
-			sudo systemctl start php7.4-fpm.service
-        else
-            if [ "$1" -eq '8' ]
-              then
+		if [ "$1" -eq '8' ]
+			then
 				sudo a2enmod php8.2
-				sudo update-alternatives --config php8.2
-				sudo update-alternatives --config phar8.2
-				sudo update-alternatives --config phar.phar8.2
+				sudo update-alternatives --config php
+				sudo update-alternatives --config phar
+				sudo update-alternatives --config phar.phar
 
 				sudo a2enmod mpm_prefork php8.2
 				sudo a2enmod mpm_event php8.2
 				sudo a2enmod mpm_worker php8.2
 				sudo a2enconf php8.2-fpm
 				sudo systemctl start php8.2-fpm.service
-            fi
-    fi
+		fi
 
-
-	sudo service apache2 restart
-	php -v
-	
-else
-    echo "Please select the version command example : switch-php 7 or switch-php 8"
+		sudo service apache2 restart
+		php -v
+		
+	else
+		echo "Please select the version command example : switch-php 7 or switch-php 8"
 fi
 
 
